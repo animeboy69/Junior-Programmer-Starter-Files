@@ -24,10 +24,7 @@ public abstract class Unit : MonoBehaviour,
         m_Agent.angularSpeed = 999;
     }
 
-    private void Start()
-    {
-
-    }
+    
 
     void SetColor(Color c)
     {
@@ -94,4 +91,17 @@ public abstract class Unit : MonoBehaviour,
     {
         
     }
+   
+    
+    private void Start() 
+    {
+        if (MainManager.Instance != null)
+        {
+            SetColor(MainManager.Instance.TeamColor);
+        }
+
+    }
+
+
+
 }
